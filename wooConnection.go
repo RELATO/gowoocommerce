@@ -108,7 +108,7 @@ func (w *WooConnection) GetAllProducts(verbose bool) ([]WooProduct, error) {
 	}
 
 	for offset := 0; offset < totalNumProducts; offset += loadPageSize {
-		endpoint := "/wp-json/wc/v3/products?offset=" + strconv.Itoa(offset)
+		endpoint := "/wp-json/wc/v3/products?orderby=id&order=asc&offset=" + strconv.Itoa(offset)
 		endpoint += "&per_page=" + strconv.Itoa(loadPageSize)
 
 		w.PushToQueue(

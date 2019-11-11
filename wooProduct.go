@@ -76,7 +76,7 @@ type WooProduct struct {
 	RatingCount       int32                    `json:"rating_count,omitempty"`      // read-only
 	RelatedIds        []int32                  `json:"related_ids,omitempty"`       // read_only
 	UpsellIds         []int32                  `json:"upsell_ids,omitempty"`
-	CrossSellIds      []string                 `json:"cross_sell_ids,omitempty"`
+	CrossSellIds      []int32                  `json:"cross_sell_ids,omitempty"`
 	ParentID          int32                    `json:"parent_id,omitempty"`
 	Categories        []WooCategory            `json:"categories,omitempty"`
 	Tags              []WooTag                 `json:"tags,omitempty"`
